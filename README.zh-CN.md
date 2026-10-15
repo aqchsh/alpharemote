@@ -31,7 +31,7 @@
 安装 JDK 17、Android SDK Platform 37.0，以及相应 Android Build Tools。设置 `ANDROID_HOME` 后运行：
 
 ```sh
-./gradlew :app:assembleRelease :app:lintRelease :app:testReleaseUnitTest
+./gradlew :app:assembleRelease :app:lintRelease
 ```
 
 输出为 `app/build/outputs/apk/release/app-release-unsigned.apk`。安装前需使用自己的签名密钥通过 `zipalign`、`apksigner` 对齐并签名。后续更新必须使用相同的包名和签名证书。
