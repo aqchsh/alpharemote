@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">α-Remote 中文版</string>
+
+    <string name="title_about">关于</string>
+    <string name="title_camera">相机</string>
+    <string name="title_settings">设置</string>
+    <string name="camera_not_connected">尚未连接相机。\n\n请开启相机，或前往“设置”检查连接。</string>
+
+    <string name="camera_button_half_shutter">对焦</string>
+    <string name="camera_button_shutter">快门</string>
+    <string name="camera_button_selftimer_3s">定时</string>
+    <string name="camera_button_record">录像</string>
+    <string name="camera_button_focus">调焦</string>
+    <string name="camera_button_zoom">变焦</string>
+
+    <string name="camera_advanced_bulb_title">B 门定时</string>
+    <string name="camera_advanced_bulb_duration">曝光时长</string>
+    <string name="camera_advanced_bulb_timer_label">B 门</string>
+    <string name="camera_advanced_bulb_note">使用此功能前，请将相机设为 B 门模式。</string>
+    <string name="camera_advanced_interval_title">间隔拍摄</string>
+    <string name="camera_advanced_interval_duration">拍摄间隔</string>
+    <string name="camera_advanced_interval_count">拍摄张数</string>
+    <string name="camera_advanced_interval_timer_label">间隔</string>
+    <string name="camera_advanced_focus_bracketing_title">焦点包围</string>
+    <string name="camera_advanced_focus_bracketing_step_duration">单次调焦时长</string>
+    <string name="camera_advanced_focus_bracketing_note">使用此功能前，请将相机设为手动对焦（MF）。若镜头带 AF/MF 开关，请将镜头开关保持在 AF。</string>
+    <string name="camera_advanced_focus_bracketing_timer_label">调焦</string>
+    <string name="camera_advanced_pending_triggers">剩余 %1$d 张</string>
+    <string name="camera_advanced_start">开始</string>
+    <string name="camera_advanced_abort">中止</string>
+
+    <string name="permission_bluetooth_rationale">本应用通过蓝牙与相机通信，需要获得蓝牙权限。</string>
+    <string name="permission_notification_rationale">如需通过通知栏控制相机，请允许本应用发送通知。</string>
+    <string name="settings_bluetooth_disabled">蓝牙未开启。请开启手机蓝牙后使用本应用。</string>
+    <string name="settings_location_service_disabled">定位服务未开启。部分手机不受影响；如果无法连接相机，请尝试在安卓设置中开启定位服务。</string>
+    <string name="settings_ble_scanning_disabled">蓝牙扫描未开启，手机可能因此无法发现相机。请在安卓设置的“定位服务”中开启“蓝牙扫描”。</string>
+    <string name="settings_missing_permission_title">需要授权</string>
+    <string name="settings_missing_notification_permission_warning">尚未获得通知权限。遥控功能仍可使用，但控制按钮不会显示在手机通知栏中。</string>
+    <string name="settings_notification_permission_button">允许通知</string>
+    <string name="settings_missing_bluetooth_permission_warning">本应用通过蓝牙与相机通信。请授予“附近的设备”权限，否则无法使用。</string>
+    <string name="settings_bluetooth_permission_button">允许蓝牙</string>
+
+    <string name="settings_camera">相机</string>
+    <string name="settings_camera_offline">“%s”已离线。</string>
+    <string name="settings_camera_connected">已连接“%s”。</string>
+    <string name="settings_camera_error">错误：%s</string>
+    <string name="settings_camera_not_associated">尚未添加相机。</string>
+    <string name="settings_camera_not_bonded">已添加相机，但尚未完成蓝牙配对。请重新连接，并在相机上确认与手机配对。</string>
+    <string name="settings_camera_remote_disabled">命令发送失败。请检查相机的“蓝牙遥控”是否开启。此选项与蓝牙配对不同，在部分机型中位于其他菜单。</string>
+    <string name="settings_camera_unknown_name">未知相机</string>
+    <string name="settings_camera_add">添加相机</string>
+    <string name="settings_camera_add_info">1. 在相机菜单中，将“蓝牙遥控”设为“开”。\n\n2. 在相机的“蓝牙设置”菜单中启动“配对”。\n\n3. 点击下方的“搜索相机”。\n\n4. 如果相机提示配对，请在相机上确认。</string>
+    <string name="settings_camera_add_confirm">搜索相机</string>
+    <string name="settings_camera_remove">移除相机</string>
+    <string name="settings_camera_remove_question">要从本应用中移除此相机吗？</string>
+    <string name="settings_camera_remove_confirm">移除相机</string>
+
+    <string name="settings_custom_buttons">自定义按钮</string>
+    <string name="settings_custom_buttons_explanation">在此添加或编辑自定义按钮。拖动手柄可调整顺序，向侧边滑动可移除按钮。</string>
+    <string name="settings_custom_buttons_add">添加按钮</string>
+    <string name="settings_custom_buttons_handle_accessibility">拖动此手柄可调整自定义按钮的顺序或移除按钮。</string>
+    <string name="settings_button_size">通知栏按钮大小</string>
+    <string name="settings_button_size_explanation">调整通知栏中自定义按钮的大小。</string>
+    <string name="settings_button_size_smaller">−</string>
+    <string name="settings_button_size_larger">+</string>
+    <string name="settings_broadcast_control">广播控制</string>
+    <string name="settings_broadcast_control_explanation">是否允许其他应用通过广播 Intent 发送相机控制命令？开启后可使用 Tasker 等应用实现自动化。</string>
+    <string name="settings_broadcast_control_more_label">使用文档</string>
+    <string name="settings_broadcast_control_more_url">https://there.oughta.be/a/bluetooth-remote#intents</string>
+    <string name="settings_broadcast_control_toggle">允许广播控制</string>
+
+    <string name="about_author_title">原作者</string>
+    <string name="about_author_text">本应用由 Sebastian Staacks 开发。你可以在他的博客 there.oughta.be 及同名 YouTube 频道了解作者和他的其他项目。</string>
+    <string name="about_blog_label">博客</string>
+    <string name="about_blog_url">https://there.oughta.be</string>
+    <string name="about_youtube_label">YouTube</string>
+    <string name="about_youtube_url">https://youtube.com/c/thereoughtabe</string>
+    <string name="about_support_title">支持原作者</string>
+    <string name="about_support_text">如果你喜欢这款应用，希望支持原作者的工作，可以请他喝杯咖啡。</string>
+    <string name="about_coffee_label">请作者喝咖啡</string>
+    <string name="about_coffee_url">https://buymeacoffee.com/there.oughta.be</string>
+    <string name="about_github_title">源码与问题反馈</string>
+    <string name="about_github_text">本应用基于 Sebastian Staacks 的 α-Remote，遵循 GNU GPL v3 许可证。此版本由 aqchsh 的 fork 添加简体中文翻译；点击下方链接查看源码或反馈问题。</string>
+    <string name="about_github_code_label">查看源码</string>
+    <string name="about_github_code_url">https://github.com/aqchsh/alpharemote</string>
+    <string name="about_github_issues_label">反馈问题</string>
+    <string name="about_github_issues_url">https://github.com/aqchsh/alpharemote/issues</string>
+    <string name="about_version_info">版本 %1$s（%2$d）</string>
+
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="ok">确定</string>
+    <string name="action">操作</string>
+    <string name="self_timer">延时拍摄</string>
+    <string name="hold_button">按住时长</string>
+    <string name="toggle_button">切换按钮</string>
+    <string name="speed">速度</string>
+    <string name="key_binding_label">实体按键</string>
+    <string name="key_binding_bind">绑定按键</string>
+    <string name="key_binding_press_key">请按下一个按键…</string>
+    <string name="key_binding_clear">清除</string>
+    <string name="key_volume_up">音量加</string>
+    <string name="key_volume_down">音量减</string>
+    <string name="key_volume_mute">静音</string>
+    <string name="key_camera">相机键</string>
+    <string name="key_focus">对焦键</string>
+    <string name="key_enter">回车</string>
+    <string name="key_space">空格</string>
+    <string name="toggle">切换</string>
+    <string name="action_timer_suffix"> 延时=%1$s秒</string>
+    <string name="action_duration_suffix"> 按住=%1$s秒</string>
+
+    <string name="status_offline">离线</string>
+    <string name="status_error">错误</string>
+    <string name="status_connecting">正在连接…</string>
+    <string name="status_focus">对焦状态</string>
+    <string name="status_shutter">快门状态</string>
+    <string name="status_recording">录像状态</string>
+    <string name="seconds">秒</string>
+    <string name="seconds_formatted">%.1f 秒</string>
+    <string name="camera_error_remote_service_missing">未找到相机的蓝牙遥控服务。</string>
+    <string name="camera_error_service_discovery_failed">无法发现相机的蓝牙服务。</string>
+
+    <string name="action_name_stop">停止</string>
+    <string name="action_name_shutter_half">半按快门对焦</string>
+    <string name="action_name_shutter">快门</string>
+    <string name="action_name_trigger_once">拍摄一次</string>
+    <string name="action_name_trigger_on_focus">合焦后拍摄</string>
+    <string name="action_name_record">录像</string>
+    <string name="action_name_af_on">AF-ON 自动对焦</string>
+    <string name="action_name_c1">C1</string>
+    <string name="action_name_zoom_in">拉近变焦</string>
+    <string name="action_name_zoom_out">拉远变焦</string>
+    <string name="action_name_focus_far">向远处调焦</string>
+    <string name="action_name_focus_near">向近处调焦</string>
+
+    <string name="help">帮助</string>
+    <string name="help_settings_connection_troubleshooting_title">连接故障排查</string>
+    <string name="help_settings_connection_troubleshooting_text">请确认相机已开启“蓝牙遥控”。这是独立于蓝牙配对的设置；开启红外遥控等其他控制方式后，此选项可能会被关闭。\n\n不同相机的选项名称可能不同，或显示为 Camera Rmt Ctrl 等缩写。请查阅相机说明书，检查蓝牙相关设置。\n\n如果相机因已与手机配对而无法重新配对，请在手机蓝牙设置中移除未关联到本应用的旧配对，然后在本应用中重新添加相机。\n\n如果仍无法连接，可以尝试重启手机，或关闭蓝牙后重新开启。</string>
+    <string name="help_settings_custom_buttons_title">自定义按钮</string>
+    <string name="help_settings_custom_buttons_text">在此选择要显示在手机通知栏中的按钮。\n\n通知栏按钮只支持点击，无法持续按住。你可以开启切换功能（点一下按下，再点一下松开），也可以设置按住时长。变焦等需要持续驱动的操作尤其适合设置较短的按住时长和较高的速度。\n\n大部分操作与相机上的对应按钮相同，以下两项需要特别说明：\n\n“半按快门对焦”等同于半按相机快门。设为切换按钮后，执行任意快门操作也会自动松开对焦按钮。\n\n“拍摄一次”会全按快门，直到相机报告快门已打开后才松开。这样即使相机需要一定时间对焦，也能触发拍摄。不过蓝牙反馈存在延迟，相机设为连拍时仍可能拍摄多张。\n\n你还可以为每个按钮绑定实体按键，例如音量键、蓝牙键盘或手柄上的按键。仅在本应用位于前台时，实体按键才会触发操作。</string>
+    <string name="help_camera_remote_title">遥控界面</string>
+    <string name="help_camera_remote_text">左上角显示相机的对焦、快门和录像状态。\n\n底部横栏中的按钮与手机通知栏中的按钮相同：只能点击，无法持续按住。\n\n主区域的按钮可像相机实体按钮一样持续按住。“AF ON”和“对焦”按钮例外，它们使用点击切换按下或松开的方式；其中“对焦”等同于半按快门。</string>
+    <string name="faq">常见问题</string>
+    <string name="faq_more">你也可以查看常见问题页面获取更多帮助（英文）。</string>
+    <string name="faq_url">https://github.com/Staacks/alpharemote#faq--troubleshooting</string>
+</resources>

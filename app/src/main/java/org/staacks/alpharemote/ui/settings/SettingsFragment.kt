@@ -238,8 +238,8 @@ class SettingsFragment : Fragment(), CustomButtonListEventReceiver, CameraAction
         if (!skipRationale && shouldShowRequestPermissionRationale(Manifest.permission.BLUETOOTH_CONNECT)) {
             MaterialAlertDialogBuilder(requireContext())
                 .setMessage(R.string.permission_bluetooth_rationale)
-                .setPositiveButton("OK") { _, _ -> launcher.launch(Manifest.permission.BLUETOOTH_CONNECT) }
-                .setNegativeButton("Cancel", null)
+                .setPositiveButton(R.string.ok) { _, _ -> launcher.launch(Manifest.permission.BLUETOOTH_CONNECT) }
+                .setNegativeButton(R.string.cancel, null)
                 .create()
                 .show()
         } else
@@ -254,10 +254,10 @@ class SettingsFragment : Fragment(), CustomButtonListEventReceiver, CameraAction
         else {
             MaterialAlertDialogBuilder(requireContext())
                 .setMessage(R.string.permission_notification_rationale)
-                .setPositiveButton("OK") { _, _ ->
+                .setPositiveButton(R.string.ok) { _, _ ->
                     notificationsRequestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 }
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.cancel, null)
                 .create()
                 .show()
         }

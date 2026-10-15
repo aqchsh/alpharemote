@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.staacks.alpharemote.MainActivity
+import org.staacks.alpharemote.R
 import java.util.UUID
 import java.util.concurrent.ConcurrentLinkedQueue
 import kotlin.experimental.and
@@ -30,7 +31,7 @@ import kotlin.experimental.and
 // and to Greg Leeds at
 // https://gregleeds.com/reverse-engineering-sony-camera-bluetooth/
 
-class CameraBLE(val scope: CoroutineScope, context: Context, val address: String, val onConnect: () -> Unit, val onDisconnect: () -> Unit) {
+class CameraBLE(val scope: CoroutineScope, private val context: Context, val address: String, val onConnect: () -> Unit, val onDisconnect: () -> Unit) {
 
     val genericAccessServiceUUID = UUID.fromString("00001800-0000-1000-8000-00805f9b34fb")!!
     val nameCharacteristicUUID = UUID.fromString("00002a00-0000-1000-8000-00805f9b34fb")!!
@@ -93,7 +94,7 @@ class CameraBLE(val scope: CoroutineScope, context: Context, val address: String
                         enqueueOperation(CameraBLESubscribe(it))
                     }
                 } else {
-                    _cameraState.value = CameraStateError(null, "Remote service not found.")
+                    _cameraState.value = CameraStateError(null, context.getString(R.string.camera_error_remote_service_missing))
                     Log.e(MainActivity.TAG, "remoteService: " + remoteService.toString())
                     Log.e(MainActivity.TAG, "commandCharacteristic: " + commandCharacteristic.toString())
                     Log.e(MainActivity.TAG, "statusCharacteristic: " + statusCharacteristic.toString())
@@ -102,7 +103,7 @@ class CameraBLE(val scope: CoroutineScope, context: Context, val address: String
                 }
             } else {
                 Log.e(MainActivity.TAG, "discovery failed: $status")
-                _cameraState.value = CameraStateError(null, "Service discovery failed.")
+                _cameraState.value = CameraStateError(null, context.getString(R.string.camera_error_service_discovery_failed))
                 //Note, at this point the service will not be usable, but we stay connected as this might be recoverable.
                 //In fact, newer cameras seem to send an onServiceChanged to bonded devices after few ms, which triggers Android to restart discovery.
                 //If this was the reason for this discovery to fail, onServiceChanged will be called soon where discoverServices will be called again.
