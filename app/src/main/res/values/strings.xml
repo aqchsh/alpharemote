@@ -98,6 +98,18 @@
     <string name="about_version_info">Version %1$s (%2$d)</string>
 
     <string name="save">Save</string>
+    <string name="ok">OK</string>
+    <string name="action_timer_suffix">timer=%1$ss</string>
+    <string name="action_duration_suffix">duration=%1$ss</string>
+    <string name="key_volume_up">Volume Up</string>
+    <string name="key_volume_down">Volume Down</string>
+    <string name="key_volume_mute">Mute</string>
+    <string name="key_camera">Camera</string>
+    <string name="key_focus">Focus</string>
+    <string name="key_enter">Enter</string>
+    <string name="key_space">Space</string>
+    <string name="camera_error_remote_service_missing">Remote service not found.</string>
+    <string name="camera_error_service_discovery_failed">Service discovery failed.</string>
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
 

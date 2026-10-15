@@ -11,11 +11,11 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "org.staacks.alpharemote"
+        applicationId = "org.aqchsh.alpharemote"
         minSdk = 31
         targetSdk = 37
-        versionCode = 10400 //xyyzz -> x.y and z for subversions like betas if required.
-        versionName = "1.4"
+        versionCode = 10401 // Chinese fork, independently signed and installable alongside upstream.
+        versionName = "1.4-zh.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

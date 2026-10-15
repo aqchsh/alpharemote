@@ -1,0 +1,40 @@
+name: Build Chinese Android APK
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install Android SDK
+        run: |
+          curl -fsSL https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip -o "$RUNNER_TEMP/android-tools.zip"
+          echo "e025545c62a8e64c7559119566a569fb1dec5f60  $RUNNER_TEMP/android-tools.zip" | sha1sum -c -
+          unzip -q "$RUNNER_TEMP/android-tools.zip" -d "$RUNNER_TEMP/android-tools"
+          "$RUNNER_TEMP/android-tools/cmdline-tools/bin/android" --no-metrics --sdk="$ANDROID_HOME" sdk install 'platforms/android-37.0'
+          "$RUNNER_TEMP/android-tools/cmdline-tools/bin/android" --no-metrics --sdk="$ANDROID_HOME" sdk install 'build-tools/37.0.0'
+      - name: Build and check
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleRelease :app:lintRelease --no-daemon --console=plain
+      - name: Upload unsigned APK and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpharemote-1.4-zh.1-build
+          path: |
+            app/build/outputs/apk/release/*.apk
+            app/build/reports/
+          if-no-files-found: error

@@ -146,4 +146,16 @@
     <string name="faq_more">In den häufig gestellten Fragen (FAQ) finden sich eventuell weitere Hinweise.</string>
     <string name="faq_url">https://github.com/Staacks/alpharemote#faq--troubleshooting</string>
 
+    <string name="ok">OK</string>
+    <string name="action_timer_suffix">Selbstauslöser=%1$ss</string>
+    <string name="action_duration_suffix">Dauer=%1$ss</string>
+    <string name="key_volume_up">Lauter</string>
+    <string name="key_volume_down">Leiser</string>
+    <string name="key_volume_mute">Stumm</string>
+    <string name="key_camera">Kamera</string>
+    <string name="key_focus">Fokus</string>
+    <string name="key_enter">Eingabe</string>
+    <string name="key_space">Leertaste</string>
+    <string name="camera_error_remote_service_missing">Bluetooth-Fernsteuerungsdienst nicht gefunden.</string>
+    <string name="camera_error_service_discovery_failed">Suche nach Bluetooth-Diensten fehlgeschlagen.</string>
 </resources>

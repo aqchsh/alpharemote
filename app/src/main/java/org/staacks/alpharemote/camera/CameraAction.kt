@@ -21,10 +21,10 @@ data class CameraAction (
     fun getName(context: Context): String {
         return context.getString(preset.template.name) +
                 (if (toggle) " " + context.getString(R.string.toggle) else "") +
-                (if (selftimer != null) " timer=" + selftimer + "s" else "") +
-                (if (duration != null) " duration=" + duration + "s" else "") +
+                (if (selftimer != null) " " + context.getString(R.string.action_timer_suffix, selftimer.toString()) else "") +
+                (if (duration != null) " " + context.getString(R.string.action_duration_suffix, duration.toString()) else "") +
                 (if (step != null) " " + "›".repeat((3.0*step).roundToInt()) else "") +
-                (if (keyCode != null) " [" + keyCodeDisplayName(keyCode) + "]" else "")
+                (if (keyCode != null) " [" + keyCodeDisplayName(keyCode, context) + "]" else "")
     }
     private fun applyStepToStepList(list: List<CameraActionStep>): List<CameraActionStep> {
         return list.map {
@@ -60,7 +60,18 @@ data class CameraAction (
 }
 
 // KEYCODE_VOLUME_UP -> "Volume Up"
-fun keyCodeDisplayName(keyCode: Int): String {
+fun keyCodeDisplayName(keyCode: Int, context: Context? = null): String {
+    val label = when (keyCode) {
+        KeyEvent.KEYCODE_VOLUME_UP -> R.string.key_volume_up
+        KeyEvent.KEYCODE_VOLUME_DOWN -> R.string.key_volume_down
+        KeyEvent.KEYCODE_VOLUME_MUTE -> R.string.key_volume_mute
+        KeyEvent.KEYCODE_CAMERA -> R.string.key_camera
+        KeyEvent.KEYCODE_FOCUS -> R.string.key_focus
+        KeyEvent.KEYCODE_ENTER -> R.string.key_enter
+        KeyEvent.KEYCODE_SPACE -> R.string.key_space
+        else -> null
+    }
+    if (label != null && context != null) return context.getString(label)
     return KeyEvent.keyCodeToString(keyCode).removePrefix("KEYCODE_").split("_")
         .joinToString(" ") { it.lowercase().replaceFirstChar(Char::uppercase) }
 }
