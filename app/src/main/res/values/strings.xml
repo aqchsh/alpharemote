@@ -99,8 +99,8 @@
 
     <string name="save">Save</string>
     <string name="ok">OK</string>
-    <string name="action_timer_suffix"> timer=%1$ss</string>
-    <string name="action_duration_suffix"> duration=%1$ss</string>
+    <string name="action_timer_suffix">timer=%1$ss</string>
+    <string name="action_duration_suffix">duration=%1$ss</string>
     <string name="key_volume_up">Volume Up</string>
     <string name="key_volume_down">Volume Down</string>
     <string name="key_volume_mute">Mute</string>

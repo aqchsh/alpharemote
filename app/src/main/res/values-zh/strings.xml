@@ -109,8 +109,8 @@
     <string name="key_enter">回车</string>
     <string name="key_space">空格</string>
     <string name="toggle">切换</string>
-    <string name="action_timer_suffix"> 延时=%1$s秒</string>
-    <string name="action_duration_suffix"> 按住=%1$s秒</string>
+    <string name="action_timer_suffix">延时=%1$s秒</string>
+    <string name="action_duration_suffix">按住=%1$s秒</string>
 
     <string name="status_offline">离线</string>
     <string name="status_error">错误</string>

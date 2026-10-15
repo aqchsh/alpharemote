@@ -21,8 +21,8 @@ data class CameraAction (
     fun getName(context: Context): String {
         return context.getString(preset.template.name) +
                 (if (toggle) " " + context.getString(R.string.toggle) else "") +
-                (if (selftimer != null) context.getString(R.string.action_timer_suffix, selftimer.toString()) else "") +
-                (if (duration != null) context.getString(R.string.action_duration_suffix, duration.toString()) else "") +
+                (if (selftimer != null) " " + context.getString(R.string.action_timer_suffix, selftimer.toString()) else "") +
+                (if (duration != null) " " + context.getString(R.string.action_duration_suffix, duration.toString()) else "") +
                 (if (step != null) " " + "›".repeat((3.0*step).roundToInt()) else "") +
                 (if (keyCode != null) " [" + keyCodeDisplayName(keyCode, context) + "]" else "")
     }
